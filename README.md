@@ -6,10 +6,14 @@ node liri.js spotify-song
 
 Using node Spotify, LIRI Bot will be able to display data about a song of your choice. Inputting this command will display the following:
 
-Artist: 
-Song Name: 
-Album: 
-Preview of Song:
+<ol>
+  <li>Artist: </li>
+  <li>Song Name: </li>
+  <li>Album: </li>
+  <li>Preview of Song: </li>
+  </ol>
+
+<br>
 
 <img src>
 
@@ -20,20 +24,27 @@ node liri.js movie-this ''
 
 Another function of LIRI Bot is that it is capable of searching for movies as well. This command will display the following:
 
-Title:
-Year: 
-Rated: 
-IMDB Rating: 
-Language: 
-Plot: 
-Actors:
+<ol>
+  <li>Title:</li>
+  <li>Year:</li>
+  <li>Rated: </li>
+  <li>IMDB Rating:</li>
+  <li>Language:</li>
+  <li>Plot: </li>
+  <li>Actors:</li>
+</ol>
+<br>
 
 node liri.js band-this ''
-
+<br>
 The last function of LIRI Bot is that by inputting you're favorite band, LIRI will print information about the band. Some information it will display is as follows:
+<br>
 
-City:
-Venue: 
-Date of the concert:
+<ol>
+  <li>City:</li>
+  <li>Venue:</li>
+  <li>Date of the concert: </li>
+  </ol>
+<br>
 
 Thank you for checking out my LIRI Bot.

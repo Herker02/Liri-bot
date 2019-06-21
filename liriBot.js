@@ -67,24 +67,28 @@ var getMovie = function(movieName){
     // Band search
 var getBand = function(bandName){
     var divider = "\n------------------------------------------------------------\n\n";
-    var URL = "https://rest.bandsintown.com/artists/" + bandName + "?app_id=codingbootcamp";
-        axios.get(URL).then(function(response){
+    // var URL = "https://rest.bandsintown.com/artists/" + bandName + "?app_id=codingbootcamp";
+        axios.get("https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp").then(function(response){
         
             var jsonData = response.data;
+            // console.log(jsonData);
+            
 
-            var showData = [
-                'City: ' + jsonData.venue.city + ", " + jsonData.venue.country,
-                'Venue: ' + jsonData.venue.name,
-                console.log("* Date of the Event: " + moment(response.data[i].datetime).format("MM/DD/YYYY"))
-                // 'Date of the event: ' + moment(jsonData.datetime).format('MM/DD/YYYY')
-                ].join("\n\n");
-    
-                console.log(showData);
-        fs.appendFile("log.txt", showData + divider, function(err) {
-        if (err) throw err;
-        console.log(showData);
-    });
-})};
+                for (var i = 0; i < jsonData.length; i++){
+                console.log('City: ' + jsonData[i].venue.city);
+                console.log('Venue: ' + jsonData[i].venue.name);
+                console.log('Date of the Event: ' + moment().format('MM/DD/YYYY'));
+                divider;
+                };
+                
+                // .catch(function(error) {
+                //     // handle error
+                //     console.log(error);
+                // fs.appendFile("log.txt", showData + divider, function(err) {
+                // if (err) throw err;
+        
+    })};
+
 
 var userPick = function(caseData,functionData){
     switch(caseData){
